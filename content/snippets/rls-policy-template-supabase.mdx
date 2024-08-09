@@ -6,7 +6,7 @@ tags: [supabase, sql]
 
 
 ```sql
-CREATE POLICY "Allow authenticated users to insert a new entry"
+CREATE POLICY "Allow users to insert a new entry"
 ON table
 FOR INSERT
 WITH CHECK (user_id = auth.uid());
