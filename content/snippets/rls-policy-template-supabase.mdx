@@ -9,7 +9,7 @@ tags: [supabase, sql]
 CREATE POLICY "Allow authenticated users to insert a new entry"
 ON table
 FOR INSERT
-WITH CHECK (auth.uid() IS NOT NULL);
+WITH CHECK (user_id = auth.uid());
 
 CREATE POLICY "Allow users to read their own entries"
 ON table
