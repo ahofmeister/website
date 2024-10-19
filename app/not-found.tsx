@@ -1,6 +1,6 @@
 export default function NotFound() {
     return (
-        <div className="prose">
+        <div className="">
             Not found!
         </div>
     )

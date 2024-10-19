@@ -25,20 +25,16 @@ export function MainNav() {
     const pathname = usePathname()
 
     return (
-        <div className="mr-4 hidden md:flex">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-                <span className="hidden font-bold sm:inline-block">
-                    Alexander Hofmeister
-        </span>
-            </Link>
-            <nav className="flex items-center gap-4 text-sm lg:gap-6">
+        <div className="hidden md:flex justify-center items-center w-full">
+            <nav className="flex text-center justify-center gap-4 text-sm lg:gap-6">
+                <NavbarLink href={'/'} label={'Home'} currentPath={pathname}/>
                 <NavbarLink href={'/about'} label={'About'} currentPath={pathname}/>
                 <NavbarLink href={'/blog'} label={'Blog'} currentPath={pathname}/>
                 <NavbarLink href={'/snippets'} label={'Snippets'} currentPath={pathname}/>
                 <NavbarLink href={'/projects'} label={'Projects'} currentPath={pathname}/>
             </nav>
         </div>
-    )
+    );
 }
 
 export default MainNav

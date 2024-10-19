@@ -1,6 +1,7 @@
 import {compareDesc, format, parseISO} from 'date-fns'
 import {allSnippets, Snippet} from 'contentlayer/generated'
 import Link from 'next/link'
+import {Badge} from "@/components/ui/badge";
 
 async function getSnippets() {
     return allSnippets.sort((a, b) => {
@@ -20,10 +21,6 @@ export default async function Snippets() {
         </div>)
 }
 
-const Tag = ({tag}: {tag: string}) => <div key={tag}>
-      <span
-          className="text-xs text-primary-foreground font-medium mr-2 px-2.5 py-0.5 rounded bg-primary">{tag}</span>
-</div>
 
 const Snippet = (snippet: Snippet) => (
     <div className="mb-3 py-6 border-b ">
@@ -35,7 +32,8 @@ const Snippet = (snippet: Snippet) => (
                 {snippet.title}
             </Link>
         </h2>
-        <div className={'mt-2 flex flex-row gap-2'}>{snippet.tags.map(tag => <Tag key={tag}
-                                                                                  tag={tag}/>)} </div>
+        <div className={'mt-2 flex flex-row gap-2'}>{snippet.tags.map(tag => <Badge
+            key={tag}>{tag}</Badge>)}
+        </div>
     </div>
 )
