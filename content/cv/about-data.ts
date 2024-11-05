@@ -54,7 +54,7 @@ export const aboutData = {
             backend: ["Java", "Quarkus", "Hibernate", "JPA", "PostgreSQL", "Supabase"],
             frontend: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn-ui", "React Native", "Flutter"],
             "Version Control": ["Git", "GitHub", "GitLab"],
-            "Project Management": ["Jira", "Notion", "Confluence", "Slack"],
+            "Project Management": ["Jira", "Notion", "Confluence", "Slack", "Google Suite"],
             "Mobile Apps": ["Flutter", "React Native", "Expo"],
             "Dev Ops": ["Docker", "Kubernetes"]
         }
@@ -65,21 +65,5 @@ export const aboutData = {
         institution: "TH Brandenburg",
         years: "2011-2015",
         thesis: "Developed an internal application to manage/view experience reports using Java EE, WildFly, JPA, and MySQL."
-    },
-    projects: {
-        heading: "🚀 Projects",
-        items: [
-            {
-                name: "Personal Homepage",
-                description: "A personal homepage for mostly some code snippets written in Markdown. Includes also the list of projects I am working on right now.",
-                technologies: ["Next.js", "Tailwind CSS", "shadcn-ui"]
-            },
-            {
-                name: "Frugalistic",
-                description: "A minimal app for tracking expenses (incl. recurring transactions),  incomes and savings. Built in with statistics for months and years. ",
-                technologies: ["Next.js", "Supabase", "Recharts", "Tailwind CSS", "shadcn-ui", "Resend"],
-                link: "https://www.frugalistic.app"
-            }
-        ]
     },
 };

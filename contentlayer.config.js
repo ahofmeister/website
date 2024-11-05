@@ -65,19 +65,36 @@ export const Project = defineDocumentType(() => ({
             description: 'The title of the project',
             required: true,
         },
-        summary: {
+        description: {
             type: 'string',
             description: 'A brief description of the project',
-            required: true
+            required: true,
         },
-        externalUrl: {
+        href: {
             type: 'string',
-            description: 'The url to the hosted project',
-            required: false
-        }
+            description: 'The URL to the hosted project',
+            required: true,
+        },
+        technologies: {
+            type: 'list',
+            description: 'The technologies used in the project',
+            required: true,
+            of: { type: 'string' },
+        },
+        status: {
+            type: 'string',
+            description: 'The status of the project',
+            required: true,
+        },
+        github: {
+            type: 'string',
+            description: 'GitHub URL',
+            required: true,
+        },
     },
     computedFields,
-}))
+}));
+
 
 const options = {
     onVisitHighlightedLine(node) {

@@ -1,40 +1,57 @@
-import {allProjects} from "@/.contentlayer/generated"
-import Link from "next/link"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle
-} from "@/components/ui/card";
+import {ArrowUpRight, Github} from "lucide-react";
+import Link from "next/link";
+import {Badge} from "@/components/ui/badge";
+import {allProjects} from "contentlayer/generated";
+import {cn} from "@/lib/utils";
 
-export default function ProjectsPage() {
+export default function ProjectPage() {
     return (
-        <div className={'m-10'}>
-            <div className="grid grid-cols-2 gap-12">
-                {allProjects.map(project =>
-                    <Card  key={project._id} className="w-[350px]">
-                        <CardHeader>
-                            <CardTitle>{project.title}</CardTitle>
+        <div className="mx-auto max-w-5xl px-4 py-16">
+            <ul className="space-y-24">
+                {allProjects.map((project) => (
+                    <li key={project.title} className="group relative">
+                        <div className="flex flex-col space-y-4">
+                            <div className="flex items-baseline justify-between">
+                                <div className={"flex space-x-4"}>
+                                <h2 className="text-2xl font-semibold">{project.title}
+                                </h2>
+                                    <Link href={project.href as string}>
+                                        <ArrowUpRight/>
+                                    </Link>
+                                </div>
+                                <div className="flex items-center">
+                                    <Badge
+                                        variant="default"
+                                        className={cn(
+                                            "border text",
+                                            {
+                                                "border-yellow-500 text-yellow-500": project.status === "Development",
+                                            }
+                                        )}
+                                    >
+                                        {project.status}
+                                    </Badge>
 
-                        </CardHeader>
-                        <CardContent>
-                            <CardDescription>{project.summary}</CardDescription>
-                        </CardContent>
-                        <CardFooter className="flex justify-between">
-                            <Link href={project.slug}>Learn more</Link>
-
-                            <div className={'mt-2'}>
-                                <a href={project.externalUrl} target={'_blank'} rel="noreferrer"
-                                   className={'underline decoration-primary underline-offset-4'}>
-                                    Visit
-                                </a>
+                                    {project.github && (
+                                        <Link className="ml-4" href={project.github} target="_blank"
+                                              rel="noopener noreferrer">
+                                            <Github/>
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
-                        </CardFooter>
-                    </Card>
-                )}
-            </div>
+                            <p className="text-gray-400 max-w-2xl">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {project.technologies?.map((tech) => (
+                                    <Badge key={tech} variant="default" className="">
+                                        {tech}
+                                    </Badge>
+                                ))}
+                            </div>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
-    )
+    );
 }

@@ -112,25 +112,10 @@ export default function CVPage() {
                 </section>
 
                 <section className="mb-8">
-                    <h2 className="text-2xl font-semibold mb-4">{aboutData.projects.heading}</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {aboutData.projects.items.map((project, index) => (
-                            <Card key={index}
-                                  className="bg-card/50 backdrop-blur-sm hover:bg-card/75 transition-colors">
-                                <CardHeader>
-                                    <CardTitle className="text-primary">{project.name}</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="mb-2 text-sm text-card-foreground">{project.description}</p>
-                                    <div className="flex flex-wrap gap-3">
-                                        {project.technologies.map((tech, techIndex) => (
-                                            <Badge key={techIndex}>{tech}</Badge>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
+                    <h2 className="text-2xl font-semibold mb-4">🚀 Private Projects</h2>
+                    <Link href={"/projects"} className="text-primary">
+                        See all projects
+                    </Link>
                 </section>
             </div>
         </div>
