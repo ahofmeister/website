@@ -27,7 +27,7 @@ export const aboutData = {
                 company: "Protofy GmbH & Co. KG",
                 startDate: "Jan 8, 2024",
                 endDate: "Oct 31, 2024",
-                description: "At Protofy, I am responsible for managing client projects, with focus on developing a web app that allow users to create, analyse, and train chess openings. My work covers both front-end and back-end development to ensure a smooth and efficient user experience.",
+                description: "At Protofy, I was responsible for managing client projects, with focus on developing a web app that allow users to create, analyse, and train chess openings. My work covered both front-end and back-end development to ensure a smooth and efficient user experience.",
                 technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "shadcn-ui", "Supabase", "PostgreSQL", "Resend", "Docker", "Flutter"]
             },
             {
