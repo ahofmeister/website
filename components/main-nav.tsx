@@ -29,7 +29,6 @@ export function MainNav() {
             <nav className="flex text-center justify-center gap-4 text-sm lg:gap-6">
                 <NavbarLink href={'/'} label={'Home'} currentPath={pathname}/>
                 <NavbarLink href={'/about'} label={'About'} currentPath={pathname}/>
-                <NavbarLink href={'/blog'} label={'Blog'} currentPath={pathname}/>
                 <NavbarLink href={'/snippets'} label={'Snippets'} currentPath={pathname}/>
                 <NavbarLink href={'/projects'} label={'Projects'} currentPath={pathname}/>
             </nav>
