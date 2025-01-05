@@ -4,7 +4,7 @@ export const aboutData = {
     contact: {
         email: {
             icon: "mail",
-            link: "mailto:HofmeisterAlexander@googlemail.com"
+            link: "mailto:ping@alexander-hofmeister.com"
         },
         linkedIn: {
             icon: "linkedin",
