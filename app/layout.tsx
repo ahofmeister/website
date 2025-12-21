@@ -2,7 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import type React from "react";
 import { Analytics } from "@/components/analytics";
-import Navbar, { MainNav } from "@/components/main-nav";
+import { MainNav } from "@/components/main-nav";
 
 interface RootLayoutProps {
 	children: React.ReactNode;
