@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 						<MainNav />
 					</div>
 				</header>
-				<main className={"py-10"}>{children}</main>
+				<main className={"p-10"}>{children}</main>
 				<Analytics />
 			</body>
 		</html>

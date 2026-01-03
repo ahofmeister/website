@@ -28,7 +28,7 @@ export function MainNav() {
 	const pathname = usePathname();
 
 	return (
-		<div className="hidden md:flex justify-center items-center w-full">
+		<div className="flex justify-center items-center w-full">
 			<nav className="flex text-center justify-center gap-4 text-sm lg:gap-6">
 				<NavbarLink href={"/"} label={"Home"} currentPath={pathname} />
 				<NavbarLink
