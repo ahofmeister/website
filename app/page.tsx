@@ -8,7 +8,7 @@ export default function Home() {
 				Alexander Hofmeister
 			</h1>
 			<div className={"my-5"}>
-				I’m a developer with over 15 years of experience in software
+				I’m a developer with over 10 years of experience in software
 				development.
 			</div>
 			<div className={"my-5"}>
