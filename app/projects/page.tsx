@@ -74,17 +74,18 @@ export default function ProjectPage() {
 										</Badge>
 									))}
 								</div>
-
-								<Link
-									href={project.metadata.github}
-									target="_blank"
-									className="inline-flex items-center gap-2 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl hover:text-foreground transition-colors"
-									rel="noopener noreferrer"
-									aria-label={`View ${project.metadata.title} on GitHub`}
-								>
-									<span>View on GitHub</span>
-									<ArrowRight className="h-5 w-5" />
-								</Link>
+								{project.metadata.github && (
+									<Link
+										href={project.metadata.github}
+										target="_blank"
+										className="inline-flex items-center gap-2 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl hover:text-foreground transition-colors"
+										rel="noopener noreferrer"
+										aria-label={`View ${project.metadata.title} on GitHub`}
+									>
+										<span>View on GitHub</span>
+										<ArrowRight className="h-5 w-5" />
+									</Link>
+								)}
 							</div>
 						</li>
 					))}
