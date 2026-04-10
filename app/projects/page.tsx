@@ -50,6 +50,8 @@ export default function ProjectPage() {
 													project.metadata.status === "development",
 												"border-green-500/50 bg-green-500/10 text-green-600 dark:text-green-400":
 													project.metadata.status === "live",
+												"border-gray-500/50 bg-gray-500/10 text-gray-600 dark:text-gray-400":
+													project.metadata.status === "paused",
 											})}
 										>
 											{project.metadata.status}
