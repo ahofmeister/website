@@ -1,5 +1,11 @@
 import { ArrowRightIcon } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Alexander Hofmeister",
+	description: "Personal website of Alexander Hofmeister.",
+};
 
 export default function Home() {
 	return (

@@ -21,6 +21,12 @@ export type Metadata = {
 	order: number;
 };
 
+export type Project = {
+	metadata: Metadata;
+	slug: string;
+	content: string;
+};
+
 function parseFrontmatter(fileContent: string) {
 	const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
 	const match = frontmatterRegex.exec(fileContent);
