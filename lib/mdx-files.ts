@@ -17,6 +17,7 @@ export type Metadata = {
 	href: string;
 	status: "live" | "development" | "paused";
 	github: string;
+	category: "own" | "work" | "other";
 	technologies: string[];
 	order: number;
 };

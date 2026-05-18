@@ -12,7 +12,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" className={`${GeistSans.className} dark`}>
 			<body
-				className={"min-h-screen bg-background antialiased text-foreground"}
+				className={
+					"min-h-screen bg-background antialiased text-foreground max-w-3xl mx-auto"
+				}
 			>
 				<header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
 					<div className="container flex h-14 max-w-(--breakpoint-2xl) items-center">
